@@ -1,18 +1,52 @@
 <!-- mostrar en este HTML los TOPICS de /topics -->
-
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+<head>
+   <meta charset="utf-8">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+   <title>Foro de opinión</title>
+</head>
+<body>
 
-    <h1>Aqui van todos los temas</h1>
-    
+  <h3>Yo opino</h3>
+<!--botón que agrega nuevos temas-->
+  <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span> Tema</button>
+<!--fin botón que agrega nuevos temas-->
+<!--tabla en la que se muestran todos los temas-->
+  <table class="table table-hover">
+    <tbody id="themes-list"></tbody>
+  </table>
+<!--fin tabla de temas-->
+<!-- Modal agregar nuevo tema-->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <form id="add-form">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Nuevo tema</h4>
+          </div>
+          <div class="modal-body">
+              <div class="form-group">
+                <label for="tema">Tema: </label>
+                <input type="text" class="form-control" content="contenido" id="tema" placeholder="Nuevo tema">
+                <label for="autor">Autor: </label>
+                <input type="text" class="form-control" name_author="autor" id="autor" placeholder="Nombre del autor">
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span></button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+<!--fin modal agregar nuevo tema-->
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/functions.js"></script>
     <script src="js/main.js"></script>
     
