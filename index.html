@@ -9,12 +9,32 @@
 </head>
 <body>
 
-  <h3>Yo opino</h3>
-<!--botón que agrega nuevos temas-->
-  <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span> Tema</button>
-<!--fin botón que agrega nuevos temas-->
+  <h2>Yo opino</h2>
+<!--BÚSQUEDA-->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Buscar tema">
+          </div>
+          <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+          <!--botón que agrega nuevos temas-->
+          <button type="button" class="btn btn-success btn-md" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span> Tema</button>
+          <!--fin botón que agrega nuevos temas-->
+      </form>
+      </div>
+    </div>
+  </div>
+<!--FIN BÚSQUEDA-->
+
 <!--tabla en la que se muestran todos los temas-->
   <table class="table table-hover">
+    <thead>
+      <th>TEMA</th>
+      <th>AUTOR</th>
+      <th>RESPUESTAS</th>
+    </thead>
     <tbody id="themes-list"></tbody>
   </table>
 <!--fin tabla de temas-->
